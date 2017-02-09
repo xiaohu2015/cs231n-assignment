@@ -5,4 +5,4 @@ The assignment for cs231n course
 - Python 3.5
 
 ## Assignment1
-- k-Nearest Neighboor Classifier  
+- K-Nearest Neighboor Classifier  [knn.py](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment1/classifiers/knn.py)
