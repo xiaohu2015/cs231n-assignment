@@ -189,10 +189,8 @@ class TwoLayerNet(object):
             # using stochastic gradient descent. You'll need to use the gradients   #
             # stored in the grads dictionary defined above.                         #
             #########################################################################
-            self.params['W2'] += - learning_rate * grads['W2']
-            self.params['b2'] += - learning_rate * grads['b2']
-            self.params['W1'] += - learning_rate * grads['W1']
-            self.params['b1'] += - learning_rate * grads['b1']
+            for k in self.params:
+                self.params[k] += - learning_rate * grads[k]
             #########################################################################
             #                             END OF YOUR CODE                          #
             #########################################################################
@@ -244,4 +242,3 @@ class TwoLayerNet(object):
         ###########################################################################
 
         return y_pre
-
