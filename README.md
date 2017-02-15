@@ -12,5 +12,6 @@ The assignment for cs231n course
 
 ## Assignment2
 - Fully-connected Neural Network  [[fc_net.py](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/cs231n/classifiers/fc_net.py), [FullyConnectedNets.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/FullyConnectedNets.ipynb)]
+- Batch Normalization [[BatchNormalization.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/BatchNormalization.ipynb)]
 
 **Thanks for the project [lightaime/cs231n](https://github.com/lightaime/cs231n)**
