@@ -2,6 +2,7 @@
 The assignment for cs231n course
 
 ## Environment
+- Windows 10
 - Python 3.5
 
 ## Assignment1
