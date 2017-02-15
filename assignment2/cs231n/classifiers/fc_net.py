@@ -180,10 +180,10 @@ class FullyConnectedNet(object):
             self.params["W%d" % (i+1,)] = weight_scale * np.random.randn(in_dim, 
                                                                     h_dim)
             self.params["b%d" % (i+1,)] = np.zeros((h_dim,))
-            in_dim = h_dim
             if use_batchnorm:
                 self.params["gamma%d" % (i+1,)] = np.ones((h_dim,))
                 self.params["beta%d" % (i+1,)] = np.zeros((h_dim,))
+            in_dim = h_dim
         # The parameter of output layer
         self.params["W%d" % (self.num_layers,)] = weight_scale * \
                                                 np.random.randn(in_dim, num_classes)
@@ -245,21 +245,20 @@ class FullyConnectedNet(object):
         # self.bn_params[1] to the forward pass for the second batch normalization #
         # layer, etc.                                                              #
         ############################################################################
-        fc_relu_cache = {}
-        if self.use_batchnorm:
-            bn_cache = {}
+        fc_mix_cache = {}
         if self.use_dropout:
             dp_cache = {}
 
         out = X
         for i in range(self.num_layers - 1):
             w, b = self.params["W%d" % (i + 1,)], self.params["b%d" % (i + 1,)]
-            out, fc_relu_cache[i] = affine_relu_forward(out, w, b)
             if self.use_batchnorm:
                 gamma = self.params["gamma%d" % (i + 1,)]
                 beta = self.params["beta%d" % (i + 1,)]
-                out, bn_cache[i] = batchnorm_forward(out, gamma, beta, 
-                                                      self.bn_params[i])
+                out, fc_mix_cache[i] = affine_bn_relu_forward(out, w, b, gamma, 
+                                           beta, self.bn_params[i])
+            else:
+                out, fc_mix_cache[i] = affine_relu_forward(out, w, b)
             if self.use_dropout:
                 out, dp_cache[i] = dropout_forward(out, self.dropout_param)
         # The output layer
@@ -303,10 +302,12 @@ class FullyConnectedNet(object):
             if self.use_dropout:
                 dout = dropout_backward(dout, dp_cache[ri])
             if self.use_batchnorm:
-                dout, dgamma, dbeta = batchnorm_backward(dout, bn_cache[ri])
+                dout, dw, db, dgamma, dbeta = affine_bn_relu_backward(dout, 
+                                                            fc_mix_cache[ri])
                 grads["gamma%d" % (ri+1,)] = dgamma
                 grads["beta%d" % (ri+1,)] = dbeta
-            dout, dw, db = affine_relu_backward(dout, fc_relu_cache[ri])
+            else:
+                dout, dw, db = affine_relu_backward(dout, fc_mix_cache[ri])
             grads["W%d" % (ri+1,)] = dw + self.reg * self.params["W%d" % (ri+1,)]
             grads["b%d" % (ri+1,)] = db
         ############################################################################
