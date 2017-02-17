@@ -14,5 +14,6 @@ The assignment for cs231n course
 - Fully-connected Neural Network  [[fc_net.py](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/cs231n/classifiers/fc_net.py), [FullyConnectedNets.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/FullyConnectedNets.ipynb)]
 - Batch Normalization [[BatchNormalization.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/BatchNormalization.ipynb)]
 - Dropout [[Dropout.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/Dropout.ipynb)]
+- ConvNet on CIFAR-10   [[cnn.py](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/cs231n/classifiers/cnn.py), [ConvolutionalNetworks.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/ConvolutionalNetworks.ipynb)]
 
 **Thanks for the project [lightaime/cs231n](https://github.com/lightaime/cs231n)**
