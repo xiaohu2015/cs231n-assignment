@@ -16,4 +16,8 @@ The assignment for cs231n course
 - Dropout [[Dropout.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/Dropout.ipynb)]
 - ConvNet on CIFAR-10   [[cnn.py](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/cs231n/classifiers/cnn.py), [ConvolutionalNetworks.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment2/ConvolutionalNetworks.ipynb)]
 
+## Assignment3
+- Image Captioning with Vanilla RNNs [[RNN_Captioning.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment3/RNN_Captioning.ipynb)]
+- Image Captioning with LSTMs [[LSTM_Captioning.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment3/LSTM_Captioning.ipynb)]
+
 **Thanks for the project [lightaime/cs231n](https://github.com/lightaime/cs231n)**
