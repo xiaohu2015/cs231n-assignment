@@ -19,5 +19,7 @@ The assignment for cs231n course
 ## Assignment3
 - Image Captioning with Vanilla RNNs [[RNN_Captioning.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment3/RNN_Captioning.ipynb)]
 - Image Captioning with LSTMs [[LSTM_Captioning.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment3/LSTM_Captioning.ipynb)]
+- Image Gradients [[ImageGradients.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment3/ImageGradients.ipynb)]
+- Image Generation [[ImageGeneration.ipynb](https://github.com/xiaohu2015/cs231n-learn/blob/master/assignment3/ImageGeneration.ipynb)]
 
 **Thanks for the project [lightaime/cs231n](https://github.com/lightaime/cs231n)**
